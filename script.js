@@ -104,54 +104,38 @@ function getCurrentGuess() {
 function checkRow() {
 
     const guess = getCurrentGuess();
+    const result = Array(wordLength).fill("wrong");
 
-    const solutionLetters = solution.split("");
-
-    const result =
-        Array(wordLength).fill("wrong");
-
-    // Grün prüfen
+    // Erst grün prüfen
     for (let i = 0; i < wordLength; i++) {
 
         if (guess[i] === solution[i]) {
-
             result[i] = "correct";
-
-            solutionLetters[i] = null;
         }
+
     }
 
-    // Gelb prüfen
+    // Dann gelb prüfen
     for (let i = 0; i < wordLength; i++) {
 
         if (result[i] === "correct") {
             continue;
         }
 
-        const foundIndex =
-            solutionLetters.indexOf(guess[i]);
-
-        if (foundIndex !== -1) {
-
+        if (solution.includes(guess[i])) {
             result[i] = "wrong-position";
-
-            solutionLetters[foundIndex] = null;
         }
+
     }
 
     // Farben setzen
     for (let i = 0; i < wordLength; i++) {
 
-        const tileIndex =
-            currentRow * wordLength + i;
+        const tileIndex = currentRow * wordLength + i;
 
-        tiles[tileIndex]
-            .classList.add(result[i]);
+        tiles[tileIndex].classList.add(result[i]);
 
-        colorKeyboardKey(
-            guess[i],
-            result[i]
-        );
+        colorKeyboardKey(guess[i], result[i]);
     }
 }
 
