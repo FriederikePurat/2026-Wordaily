@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vatertag - Startseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="win-popup" class="popup hidden">
+    <div class="popup-box">
+        <h2>Gewonnen! 🎉</h2>
+        <p>Du hast dein Vatertagsgeschenk erraten:</p>
+        <h1>Pickleball</h1>
+        <p>Wir gehen zusammen Pickleball spielen!</p>
+        <button type="button" onclick="closePopup()">Juhu!</button>
+    </div>
+</div>
+
+<body>
+
+    <header>
+        <h1>Vatertag 2026</h1>
+    </header>
+
+    <main>
+
+        <section class="form-mitte">
+
+            <form action="spielseite.html">
+
+                <h2>Errate das Wort und gewinne mit uns einen schönen Familientag!</h2>
+
+                <div class="wordle-board">
+
+                    <!-- Reihe 1 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                    <!-- Reihe 2 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                    <!-- Reihe 3 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                    <!-- Reihe 4 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                    <!-- Reihe 5 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                    <!-- Reihe 6 -->
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+                    <div class="wordle-tile"></div>
+
+                </div>
+
+                <div class="wordle-keyboard">
+                    <div class="keyboard-row">
+                        <button type="button" class="wordle-key">Q</button>
+                        <button type="button" class="wordle-key">W</button>
+                        <button type="button" class="wordle-key">E</button>
+                        <button type="button" class="wordle-key">R</button>
+                        <button type="button" class="wordle-key">T</button>
+                        <button type="button" class="wordle-key">Z</button>
+                        <button type="button" class="wordle-key">U</button>
+                        <button type="button" class="wordle-key">I</button>
+                        <button type="button" class="wordle-key">O</button>
+                        <button type="button" class="wordle-key">P</button>
+                    </div>
+
+                    <div class="keyboard-row">
+                        <button type="button" class="wordle-key">A</button>
+                        <button type="button" class="wordle-key">S</button>
+                        <button type="button" class="wordle-key">D</button>
+                        <button type="button" class="wordle-key">F</button>
+                        <button type="button" class="wordle-key">G</button>
+                        <button type="button" class="wordle-key">H</button>
+                        <button type="button" class="wordle-key">J</button>
+                        <button type="button" class="wordle-key">K</button>
+                        <button type="button" class="wordle-key">L</button>
+                    </div>
+
+                    <div class="keyboard-row">
+                        <button type="button" class="wordle-key">Y</button>
+                        <button type="button" class="wordle-key">X</button>
+                        <button type="button" class="wordle-key">C</button>
+                        <button type="button" class="wordle-key">V</button>
+                        <button type="button" class="wordle-key">B</button>
+                        <button type="button" class="wordle-key">N</button>
+                        <button type="button" class="wordle-key">M</button>
+
+                        <button type="button"
+                                class="wordle-key big"
+                                id="delete-key">
+                            ⌫
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button"
+                                class="wordle-key big"
+                                id="enter-key">
+                            ENTER
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
